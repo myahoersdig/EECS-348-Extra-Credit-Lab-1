@@ -38,7 +38,6 @@ int main() {
     int arr2[5][5];
     FILE *input_file;
     char filename[50];
-    int i, j;
 
     printf("Enter file name: ");
     scanf("%s", filename);
@@ -48,13 +47,13 @@ int main() {
         printf("Error opening file\n");
     }
 
-    for (i = 0; i < NUM_DEPARTMENTS; i++) {
-        for (j = 0; j < NUM_PROGRAMMERS; j++) {
+    for (int i = 0; i < NUM_DEPARTMENTS; i++) {
+        for (int j = 0; j < NUM_PROGRAMMERS; j++) {
             fscanf(input_file, "%d", &arr1[i][j]);
         }
     }
-    for (i = 0; i < NUM_PROGRAMMERS; i++) {
-        for (j = 0; j < NUM_DEPARTMENTS; j++) {
+    for (int i = 0; i < NUM_PROGRAMMERS; i++) {
+        for (int j = 0; j < NUM_DEPARTMENTS; j++) {
             fscanf(input_file, "%d", &arr2[i][j]);
         }
     }
