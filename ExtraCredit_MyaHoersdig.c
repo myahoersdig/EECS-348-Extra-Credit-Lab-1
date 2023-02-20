@@ -20,8 +20,7 @@ void do_task(int departments[5][5], int programmers[5][5]) {
     int assignments[5] = {0};
 
     for (int i = 0; i < 5; i++) {
-        int j;
-        for (j = 0; j < 5; j++) {
+        for (int j = 0; j < 5; j++) {
             int pref_programmer = departments[i][j];
             if (used[pref_programmer-1] == 0) {
                 assignments[i] = pref_programmer;
