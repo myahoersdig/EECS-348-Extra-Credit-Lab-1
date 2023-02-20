@@ -1,13 +1,14 @@
 /*
 Mya Hoersdig
-EECS 348 Lab3 Problem 1
-Given 12 monthly sales numbers in an input file. Using functions, generate a tabular sales report 
-and also the sales summary report (as shown in the sample output). Your output should include 
-the below:   
- Sales report (month and sales in two columns) 
- minimum, maximum, and average of the monthly sales. 
- six-month moving averages. 
- monthly sales report from highest to lowest. 
+EECS 348 Extra Credit Lab1
+Suppose there are 5 Departments and 5 Programmers, each identified with an integer number between 1 and 5. 
+You are to assign each Programmer to a Department according to the preferences given below. 
+Each Department has a preference for the Programmers. For example, Department #1 preferences 
+are as follows: 1 5 3 2 4, meaning that it would like to have programmer #1 as its first 
+choice and programmer #4 as its last option. When there is a conflict, i.e., two Departments
+would like to have the same Programmer as their first choice, then consult with the Programmer in question, 
+(that is, check his/her preferences) to determine which Department gets to hire him/her. 
+When the program terminates, all Departments should have one programmer assigned to them.
 */
 #include <stdio.h>
 
@@ -25,7 +26,7 @@ void do_task(int departments[5][5], int programmers[5][5]) {
             if (used[pref_programmer-1] == 0) {
                 assignments[i] = pref_programmer;
                 used[pref_programmer-1] = 1;
-                printf("Department %d is assigned Programmer %d\n", i+1, pref_programmer);
+                printf("Department %d will get Programmer %d\n", i+1, pref_programmer);
                 break;
             }
         }
